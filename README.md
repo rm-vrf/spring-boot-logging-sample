@@ -263,7 +263,7 @@ java -Dlog.receiver.address=localhost \
     --logging.config=logback.xml
 ```
 
-### 查询分析
+### 存储结构
 
 一切正常的话，日志就已经进入 Elasticsearch，可以在 Kibana 界面上查询到了。如果不正常，就一步一步排查一下。
 
