@@ -10,10 +10,16 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class DemoController {
 	
-	protected Logger logger = LoggerFactory.getLogger(DemoController.class);
+	private static final Logger LOG = LoggerFactory.getLogger(DemoController.class);
 	
 	@Autowired
 	private DemoService demoService;
+
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String index() throws Exception {
+		LOG.info("index");
+		return "Index!";
+	}
 
 	@RequestMapping(value = "/v1/test", method = RequestMethod.GET)
 	public String test() throws Exception {
